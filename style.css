@@ -10,13 +10,24 @@ html {
 }
 
 body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     background-image: url('background.jpeg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    z-index: -1;
+    opacity: 0.5; 
 }
 
 .container {
@@ -25,4 +36,23 @@ body {
     background-color: #A0CFD3;
     padding: 4rem;
     border-radius: 2rem;
+    box-shadow: 0 0 0.5rem 0.5rem rgba(0, 0, 0, 0.3);
 }
+
+.tabs-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.5)
+}
+
+.tabs-button {
+    font-size: 1.8rem;
+    font-weight: 600;
+    background: none;
+    border: none;
+    color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
