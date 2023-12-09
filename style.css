@@ -56,3 +56,48 @@ body::before {
     cursor: pointer;
 }
 
+.tabs-button.active {
+    color: #3E2F5B;
+    position: relative;
+}
+
+.tabs-button.active::after {
+    display: block;
+    content: '';
+    height: 4px;
+    width: 100%;
+    background-color: #3E2F5B;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+}
+
+.content-box {
+    padding: 2rem;
+}
+
+.content h2 {
+    font-family: 'Playpen sans', sans-serif;
+    margin-bottom: 1rem;
+}
+
+.content {
+    font-family: 'Noto sans', sans-serif;
+    font-size: 1.2rem;
+}
+
+.content a,
+.content a:visited, 
+.content a:hover,
+.content a:active {
+    text-decoration: none;
+    color: #60594D;
+}
+
+.content a:hover {
+    color: #8B635C;
+}
+
+.content ul {
+    list-style-type: none;
+}
