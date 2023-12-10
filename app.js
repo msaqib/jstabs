@@ -1,10 +1,7 @@
 const tabs = document.querySelectorAll('.tabs-button')
 const line = document.querySelector('.line')
 const content = document.querySelectorAll('.content')
-
 const active = document.querySelector('.active')
-// line.style.width = active.offsetWidth + 'px'
-//line.style.left = active.offsetLeft + 'px'
 
 tabs.forEach( (tab, index) => {
     tab.addEventListener( 'click', (event) => {
