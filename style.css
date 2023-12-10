@@ -33,6 +33,7 @@ body::before {
 .container {
     margin-left: 2rem;
     width: 600px;
+    min-height: 70%;
     background-color: #A0CFD3;
     padding: 4rem;
     border-radius: 2rem;
@@ -43,7 +44,8 @@ body::before {
     width: 100%;
     display: flex;
     justify-content: space-around;
-    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.5)
+    border-bottom: 0.1rem solid rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .tabs-button {
@@ -58,18 +60,18 @@ body::before {
 
 .tabs-button.active {
     color: #3E2F5B;
-    position: relative;
 }
 
-.tabs-button.active::after {
+.line {
     display: block;
     content: '';
     height: 4px;
-    width: 100%;
+    width: 60px;
     background-color: #3E2F5B;
     position: absolute;
-    bottom: -2px;
-    left: 0;
+    top: 3rem;
+    left: 26px;
+    transition: all 0.5s ease;
 }
 
 .content-box {
@@ -83,7 +85,24 @@ body::before {
 
 .content {
     font-family: 'Noto sans', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    display: none;
+    animation: slide 0.5s ease;
+}
+
+@keyframes slide {
+    from {
+        transform: translateY(80px);
+        opacity: 0.3;
+    }    
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.content.visible {
+    display: block;
 }
 
 .content a,
@@ -91,7 +110,7 @@ body::before {
 .content a:hover,
 .content a:active {
     text-decoration: none;
-    color: #60594D;
+    color: #81171B;
 }
 
 .content a:hover {
